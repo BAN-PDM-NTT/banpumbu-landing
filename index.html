@@ -30,6 +30,42 @@
     footer {
       margin-top: 40px;
     }
+    /* Warna background berbeda tiap aplikasi */
+  .card-visitasi {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+  }
+  .card-konfirmasi {
+    background: linear-gradient(135deg, #28a745, #85e085);
+    color: white;
+  }
+  .card h5, .card p {
+    color: inherit; /* Supaya teks ikut warna */
+  }
+
+  /* Kontak dengan latar berbeda */
+    .contact-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .contact-item:hover {
+    transform: scale(1.05);
+  }
+  .contact-email {
+    background: linear-gradient(135deg, #ff7b00, #ffaf40);
+  }
+  .contact-alamat {
+    background: linear-gradient(135deg, #6f42c1, #b07dff);
+  }
+  .contact-wa {
+    background: linear-gradient(135deg, #25d366, #128c7e); /* hijau khas WA */
+  }
   </style>
 </head>
 <body>
@@ -74,8 +110,8 @@
 
         <!-- Laporan Visitasi -->
         <div class="col-md-6 col-lg-4">
-          <a href="https://laporan-visitasi.banpumbu.com" class="text-decoration-none text-dark">
-            <div class="card h-100 text-center">
+          <a href="https://laporan-visitasi.banpumbu.com" class="text-decoration-none">
+            <div class="card h-100 text-center card-visitasi">
               <div class="card-body">
                 <div class="mb-3 fs-1">📑</div>
                 <h5 class="card-title">LAPORAN VISITASI ASESOR</h5>
@@ -85,10 +121,10 @@
           </a>
         </div>
         
-        <!-- Absensi Pelatihan -->
+        <!-- Konfirmasi Asesor -->
         <div class="col-md-6 col-lg-4">
-          <a href="http://konfirmasi-asesor.banpumbu.com" class="text-decoration-none text-dark">
-            <div class="card h-100 text-center">
+          <a href="http://konfirmasi-asesor.banpumbu.com" class="text-decoration-none">
+            <div class="card h-100 text-center card-konfirmasi">
               <div class="card-body">
                 <div class="mb-3 fs-1">📝</div>
                 <h5 class="card-title">KONFIRMASI ASESOR</h5>
@@ -97,7 +133,6 @@
             </div>
           </a>
         </div>
-
       </div>
     </div>
   </section>
@@ -112,13 +147,23 @@
   </section>
 
   <!-- Kontak -->
-  <section id="kontak" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Kontak</h2>
-      <p>Email: <a href="mailto:info@banpumbu.com">yonathan.ndapa21@gmail.com</a></p>
-      <p>Alamat: Kupang, NTT - Indonesia</p>
+<section id="kontak" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Kontak</h2>
+
+    <a href="mailto:yonathan.ndapa21@gmail.com" class="contact-item contact-email">
+      📧 Email: yonathan.ndapa21@gmail.com
+    </a>
+
+    <a href="https://wa.me/6281234567890" target="_blank" class="contact-item contact-wa">
+      💬 WhatsApp: 0812-3456-7890
+    </a>
+
+    <div class="contact-item contact-alamat">
+      📍 Alamat: Kupang, NTT - Indonesia
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
